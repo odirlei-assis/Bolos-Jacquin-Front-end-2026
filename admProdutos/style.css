@@ -8,6 +8,7 @@
     --corPrincipal: #FFF4F4;
     --fontHanken: "Hanken Grotesk", sans-serif;
     --corDourado: #C5A028;
+    --corSecundaria: #FDF8F8;
 }
 
 .container {
@@ -60,7 +61,7 @@ header {
     font-size: 20px;
 }
 
-.box_busca input:focus{
+.box_busca input:focus {
     outline: none;
 }
 
@@ -88,25 +89,25 @@ header {
 }
 
 /* ---------- BOTAO MENU ---------- */
-.header_container button{
+.header_container button {
     background-color: transparent;
     border: none;
     display: none;
 }
 
-.header_container button svg{
+.header_container button svg {
     width: 50px;
 }
 
 /* ---------- SECAO CADASTRO DE PRODUTOS ---------- */
-.cad_container{
+.cad_container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px 0;
 }
 
-.icon_jacquin{
+.icon_jacquin {
     width: 200px;
 }
 
@@ -152,48 +153,49 @@ header {
 
 
 /* ---------- FORMULARIO ---------- */
-form{
+form {
     /* background-color: aquamarine; */
     width: 100%;
 }
 
-.inputs_form{
+.inputs_form {
     display: flex;
     justify-content: space-around;
     width: 100%;
     max-width: 1200px;
 }
 
-.lf_coluna{
+.lf_coluna {
     display: flex;
     flex-direction: column;
 }
 
-.lf_linha{
+.lf_linha {
     display: flex;
 }
 
-.input_img svg{
+.input_img svg {
     width: 24px;
 }
 
 .form_coluna1,
-.form_coluna2{
-    width: 414px;
+.form_coluna2 {
+    max-width: 414px;
+    width: 45%;
 }
 
 .input_img span,
-form label{
+form label {
     font-family: var(--fontHanken);
     text-transform: uppercase;
     color: #444444;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 
 .inputs_form input[type=text],
-.inputs_form textarea{
+.inputs_form textarea {
     background-color: transparent;
     border: none;
     border-bottom: solid 1px #444444;
@@ -201,19 +203,19 @@ form label{
 }
 
 .inputs_form input[type=text]:focus,
-.inputs_form textarea:focus{
+.inputs_form textarea:focus {
     outline: none;
 }
 
-.linha_form{
+.linha_form {
     margin-bottom: 20px;
 }
 
-.inputs_form input[type=file]{
+.inputs_form input[type=file] {
     display: none;
 }
 
-.input_img label{
+.input_img label {
     /* background-color: blueviolet; */
     display: flex;
     align-items: center;
@@ -222,31 +224,77 @@ form label{
     border: solid 1px #444444;
 }
 
-.input_img label:hover{
+.input_img label:hover {
     cursor: pointer;
 }
 
 form input[type=checkbox],
-form input[type=text]{
+form input[type=text] {
     height: 25px;
 }
 
-.input_cat input{
-    width: 314px;
+.input_cat {
+    width: 79%;
+}
+
+.input_cat input {
+    max-width: 314px;
     margin-right: 20px;
 }
 
-.input_valor input{
-    margin-right: 20px;
-    width: 360px;
+.input_valor {
+    width: 91%;
 }
 
-form input[type=button]{
+.input_valor input {
+    margin-right: 20px;
+    max-width: 360px;
+}
+
+form input[type=button] {
     margin: 100px auto 0;
     display: block;
-
-    
+    font-family: var(--fontHanken);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 16px 55px;
+    cursor: pointer;
+    letter-spacing: 3px;
 }
+
+
+
+
+/* ---------- LISTA DE PRODUTOS ---------- */
+.list_produtos{
+    background-color: var(--corSecundaria);
+}
+
+table{
+    background-color: aquamarine;
+    width: 100%;
+    font-family: var(--fontHanken);
+    text-transform: uppercase;
+}
+
+thead{
+    font-size: 12px;
+    font-weight: 600;
+    color: #444444;
+}
+
+tbody{
+    color: #AAAAAA;
+}
+
+table svg{
+    width: 35px;
+}
+
 
 
 
@@ -258,28 +306,43 @@ form input[type=button]{
 
 
 /* ---------- MEDIAS ---------- */
-@media screen and (max-width: 768px){
-    .header_container button{
+@media screen and (max-width: 768px) {
+    .header_container button {
         display: block;
     }
 
     .link_inicio,
-    .box_busca{
+    .box_busca {
         display: none;
     }
 
-    .box_h2 h2{
+    .box_h2 h2 {
         font-size: 32px;
     }
 
-    .box_h2 span{
+    .box_h2 span {
         font-size: 20px;
         bottom: -18px;
         margin-bottom: 20px;
     }
 
-    .box_h2 hr{
+    .box_h2 hr {
         margin-top: 10px;
         width: 70%;
+    }
+
+
+
+
+    /* ----- FORMULARIO ----- */
+    .inputs_form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form_coluna1,
+    .form_coluna2 {
+        max-width: 500px;
+        width: 80%;
     }
 }
